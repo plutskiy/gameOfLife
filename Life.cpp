@@ -96,13 +96,8 @@ void Life::update_game() {
                 other_life.setAliveCell(x, y);
                 continue;
             }
-
-            if (getCellState(x, y)) {
-                if (alive_neighbours < 2 or alive_neighbours > 3) {
-                    other_life.setDeadCell(x, y);
-                } else if (alive_neighbours == 2) {
-                    other_life.setAliveCell(x, y);
-                }
+            if (getCellState(x, y) and alive_neighbours == 2) {
+                other_life.setAliveCell(x, y);
             }
         }
     }
