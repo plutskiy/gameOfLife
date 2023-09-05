@@ -22,9 +22,9 @@ public:
 
     bool IsValid(size_t x, size_t y) const;
 
-    bool setAliveCell(size_t x, size_t y);
+    void setAliveCell(size_t x, size_t y);
 
-    bool setDeadCell(size_t x, size_t y);
+    void setDeadCell(size_t x, size_t y);
 
     friend std::ostream &operator<<(std::ostream &os, Life &life);
 

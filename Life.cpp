@@ -44,14 +44,14 @@ void Life::setStateValue_(size_t x, size_t y, bool state) {
     cell_states_[x * widwght_ + y] = state;
 }
 
-bool Life::setAliveCell(size_t x, size_t y) {
+void Life::setAliveCell(size_t x, size_t y) {
     if (!IsValid(x, y)) {
         throw LifeExeption("Invalid index x = " + std::to_string(x) + " or y = " + std::to_string(y));
     }
     setStateValue_(x, y, true);
 }
 
-bool Life::setDeadCell(size_t x, size_t y) {
+void Life::setDeadCell(size_t x, size_t y) {
     if (!IsValid(x, y)) {
         throw LifeExeption("Invalid index x = " + std::to_string(x) + " or y = " + std::to_string(y));
     }
