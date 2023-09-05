@@ -18,7 +18,7 @@ public:
 
     std::vector<bool> getCellStates() const;
 
-    bool getCallState(int x, int y) const;
+    bool getCellState(int x, int y) const;
 
     bool IsValid(size_t x, size_t y) const;
 
@@ -29,6 +29,9 @@ public:
     friend std::ostream &operator<<(std::ostream &os, Life &life);
 
     size_t check_live_neighbours(size_t x, size_t y);
+
+    void update_game();
+
 
 private:
     void setStateValue_(size_t x, size_t y, bool state);
