@@ -157,3 +157,22 @@ TEST(OPERATOR, COUT){
     std::string output = testing::internal::GetCapturedStdout();
     ASSERT_EQ(". . . \n. * . \n. . . \n", output);
 }
+
+TEST(dsafas,fafa){
+    Life a(10,10);
+    a.setAliveCell(4,5);
+    a.setAliveCell(5,5);
+    a.setAliveCell(5,4);
+    a.setAliveCell(4,4);
+
+//    while(true){
+//        std::cout << a << std::endl << std::endl<< std::endl<< std::endl;
+//        a.update_game();
+//        sleep(1);
+//    }
+}
+
+TEST(Random, Tests){
+
+
+}

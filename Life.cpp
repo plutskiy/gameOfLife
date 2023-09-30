@@ -1,4 +1,5 @@
 #include "Life.h"
+#include <algorithm>
 
 Life::Life(size_t wighth, size_t height) : widwght_(wighth), height_(height) {
     if (wighth < 3 and height < 3) {
@@ -105,5 +106,8 @@ void Life::update_game() {
 }
 
 
-
-
+void Life::fill() {
+    std::transform(cell_states_.begin(), cell_states_.end(), cell_states_.begin(), [](bool item) {
+        return bool(rand() % 2);;
+    });
+}

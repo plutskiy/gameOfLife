@@ -9,13 +9,17 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googletest)
 
-set(CMAKE_CXX_STANDARD 17)
+
+
+set(CMAKE_CXX_STANDARD 23)
 set(TEST_NAME ${PROJECT_NAME}_tests)
+add_executable(${PROJECT_NAME}_bin Life.h Life.cpp main.cpp)
+
 add_executable(${TEST_NAME}
         Life.cpp
         Life.h
-        life_tets.cpp
-        main.cpp)
+        life_tets.cpp)
+
 target_link_libraries(${TEST_NAME} gtest_main)
 
 enable_testing()

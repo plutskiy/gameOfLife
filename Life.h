@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <vector>
 
 class LifeExeption : public std::runtime_error {
 public:
@@ -32,6 +33,7 @@ public:
 
     void update_game();
 
+    void fill();
 
 private:
     void setStateValue_(size_t x, size_t y, bool state);
