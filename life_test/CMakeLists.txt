@@ -5,20 +5,19 @@ include(FetchContent)
 FetchContent_Declare(
         googletest
         GIT_REPOSITORY https://github.com/google/googletest.git
-        GIT_TAG        release-1.12.0
+        GIT_TAG release-1.12.0
 )
 FetchContent_MakeAvailable(googletest)
 
-
-
 set(CMAKE_CXX_STANDARD 23)
 set(TEST_NAME ${PROJECT_NAME}_tests)
-add_executable(${PROJECT_NAME}_bin Life.h Life.cpp main.cpp)
+add_executable(${PROJECT_NAME}_bin ../life_backend/Life.cpp ../life_backend/Life.h
+        ../main.cpp)
 
 add_executable(${TEST_NAME}
-        Life.cpp
-        Life.h
-        life_tets.cpp)
+        ../life_backend/Life.cpp
+        ../life_backend/Life.h
+        ../life_tets.cpp)
 
 target_link_libraries(${TEST_NAME} gtest_main)
 

@@ -1,0 +1,3 @@
+/Users/plut/CLionProject/game/life_backend/cmake-build-debug/CMakeFiles/game_bin.dir
+/Users/plut/CLionProject/game/life_backend/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/plut/CLionProject/game/life_backend/cmake-build-debug/CMakeFiles/rebuild_cache.dir

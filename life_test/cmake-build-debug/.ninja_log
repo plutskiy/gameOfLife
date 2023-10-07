@@ -1,0 +1,11 @@
+# ninja log v5
+0	1254	1696632354505861824	CMakeFiles/game_tests.dir/Users/plut/CLionProject/game/Life.cpp.o	5aaf0c0694425c8f
+2336	2449	1696632355707706000	lib/libgtest.a	6767dece8f60eb31
+2449	2465	1696632355723848000	lib/libgtest_main.a	1e443899cdfa5de
+1162	1933	1696632550333102831	game_tests	dfd7aa2cbbab975c
+1162	1933	1696632550333102831	game_tests[1]_tests.cmake	dfd7aa2cbbab975c
+2	2336	1696632355586685891	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	1af1982f287473ad
+14	1162	1696632549559880825	CMakeFiles/game_tests.dir/life_tets.cpp.o	d2f9082bbea1b9c3
+1	1240	1696632354487983820	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	e7f3450f36ac1d6c
+1162	1933	1696632550333102831	/Users/plut/CLionProject/game/life_test/cmake-build-debug/game_tests[1]_tests.cmake	dfd7aa2cbbab975c
+14	958	1696632549351506681	CMakeFiles/game_tests.dir/Users/plut/CLionProject/game/life_backend/Life.cpp.o	75ef23f51da96367

@@ -1,6 +1,6 @@
 #include <iostream>
 #include "gtest/gtest.h"
-#include "Life.h"
+#include "../life_backend/Life.h"
 
 
 TEST(TestsOfLife, Default) {
@@ -130,6 +130,8 @@ TEST(GETTERS, call_cell) {
     ASSERT_EQ(a.getCellState(-1, -1), true);
     ASSERT_EQ(a.getCellState(10, 10), true);
 }
+
+
 
 
 TEST(GETTERS, call_cell_exeption) {
