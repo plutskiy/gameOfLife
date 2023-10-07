@@ -1,4 +1,13 @@
-/Users/plut/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Users/plut/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/plut/CLionProject/game/life_test -B /Users/plut/CLionProject/game/life_test/cmake-build-debug
--- Configuring done (0.3s)
--- Generating done (0.0s)
--- Build files have been written to: /Users/plut/CLionProject/game/life_test/cmake-build-debug
+/home/maria/Загрузки/CLion-2022.2.4/clion-2022.2.4/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/maria/Загрузки/CLion-2022.2.4/clion-2022.2.4/bin/ninja/linux/x64/ninja -G Ninja -S /home/maria/CLionProjects/plut_game_of_life_2/life_test -B /home/maria/CLionProjects/plut_game_of_life_2/life_test/cmake-build-debug
+CMake Error: The current CMakeCache.txt directory /home/maria/CLionProjects/plut_game_of_life_2/life_test/cmake-build-debug/_deps/googletest-subbuild/CMakeCache.txt is different than the directory /Users/plut/CLionProject/game/life_test/cmake-build-debug/_deps/googletest-subbuild where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+
+CMake Error at /home/maria/Загрузки/CLion-2022.2.4/clion-2022.2.4/bin/cmake/linux/x64/share/cmake-3.26/Modules/FetchContent.cmake:1610 (message):
+  CMake step for googletest failed: 1
+Call Stack (most recent call first):
+  /home/maria/Загрузки/CLion-2022.2.4/clion-2022.2.4/bin/cmake/linux/x64/share/cmake-3.26/Modules/FetchContent.cmake:1762:EVAL:2 (__FetchContent_directPopulate)
+  /home/maria/Загрузки/CLion-2022.2.4/clion-2022.2.4/bin/cmake/linux/x64/share/cmake-3.26/Modules/FetchContent.cmake:1762 (cmake_language)
+  /home/maria/Загрузки/CLion-2022.2.4/clion-2022.2.4/bin/cmake/linux/x64/share/cmake-3.26/Modules/FetchContent.cmake:1976 (FetchContent_Populate)
+  CMakeLists.txt:10 (FetchContent_MakeAvailable)
+
+
+-- Configuring incomplete, errors occurred!

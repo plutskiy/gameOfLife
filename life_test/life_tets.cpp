@@ -164,12 +164,7 @@ TEST(dsafas,fafa){
     a.setAliveCell(5,4);
     a.setAliveCell(4,4);
 
-//    while(true){
-//        std::cout << a << std::endl << std::endl<< std::endl<< std::endl;
-//        a.update_game();
-//        sleep(1);
-//    }
-}
+
 
 TEST(Random, Tests){
 

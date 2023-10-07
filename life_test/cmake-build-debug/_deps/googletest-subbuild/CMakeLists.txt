@@ -12,18 +12,18 @@ project(googletest-populate NONE)
 
 # Pass through things we've already detected in the main project to avoid
 # paying the cost of redetecting them again in ExternalProject_Add()
-set(GIT_EXECUTABLE [==[/opt/homebrew/bin/git]==])
-set(GIT_VERSION_STRING [==[2.38.0]==])
+set(GIT_EXECUTABLE [==[/usr/bin/git]==])
+set(GIT_VERSION_STRING [==[2.34.1]==])
 set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
-  [==[/opt/homebrew/bin/git;2.38.0]==]
+  [==[/usr/bin/git;2.34.1]==]
 )
 
 
 include(ExternalProject)
 ExternalProject_Add(googletest-populate
-                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/google/googletest.git" "GIT_TAG" "release-1.12.0"
-                    SOURCE_DIR          "/Users/plut/CLionProject/game/life_test/cmake-build-debug/_deps/googletest-src"
-                    BINARY_DIR          "/Users/plut/CLionProject/game/life_test/cmake-build-debug/_deps/googletest-build"
+                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/google/googletest.git" "GIT_TAG" "release-1.12.1"
+                    SOURCE_DIR          "/home/maria/CLionProjects/plut_game_of_life_2/life_test/cmake-build-debug/_deps/googletest-src"
+                    BINARY_DIR          "/home/maria/CLionProjects/plut_game_of_life_2/life_test/cmake-build-debug/_deps/googletest-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""
