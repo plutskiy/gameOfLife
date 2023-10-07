@@ -131,9 +131,6 @@ TEST(GETTERS, call_cell) {
     ASSERT_EQ(a.getCellState(10, 10), true);
 }
 
-
-
-
 TEST(GETTERS, call_cell_exeption) {
     Life a(10, 10);
     ASSERT_THROW(a.getCellState(-10, 10), LifeExeption);
