@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.26)
-project(example)
+project(game_tests)
 
 include(FetchContent)
 FetchContent_Declare(
@@ -10,13 +10,12 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 
 set(CMAKE_CXX_STANDARD 23)
-set(TEST_NAME ${PROJECT_NAME}_tests)
+set(TEST_NAME ${PROJECT_NAME})
 
-#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++23 -lmingw32")
-#set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
+add_executable(${TEST_NAME} life_tets.cpp ${CMAKE_SOURCE_DIR}/../life_backend/Life.h ${CMAKE_SOURCE_DIR}/../life_backend/Life.cpp)
 
-add_subdirectory(life_frontend)
-add_executable(${TEST_NAME} life_tets.cpp)
+target_include_directories(${TEST_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/life_backend)
+
 target_link_libraries(${TEST_NAME} gtest_main)
 
 enable_testing()

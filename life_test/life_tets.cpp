@@ -156,17 +156,3 @@ TEST(OPERATOR, COUT){
     std::string output = testing::internal::GetCapturedStdout();
     ASSERT_EQ(". . . \n. * . \n. . . \n", output);
 }
-
-TEST(dsafas,fafa){
-    Life a(10,10);
-    a.setAliveCell(4,5);
-    a.setAliveCell(5,5);
-    a.setAliveCell(5,4);
-    a.setAliveCell(4,4);
-
-
-
-TEST(Random, Tests){
-
-
-}
