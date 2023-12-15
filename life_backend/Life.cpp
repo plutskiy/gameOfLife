@@ -21,7 +21,6 @@ std::vector<bool> Life::getCellStates() const {
     return cell_states_;
 }
 
-
 bool Life::getCellState(int x, int y) const {
     if (x == widwght_) x = 0;
     if (y == height_) y = 0;
@@ -30,19 +29,18 @@ bool Life::getCellState(int x, int y) const {
 
 
     if (!IsValid(x, y)) {
-        throw LifeExeption("Invalid index x = " + std::to_string(x) + " or y = " + std::to_string(y));
+        throw LifeExeption("In getCellState Invalid index x = " + std::to_string(x) + " or y = " + std::to_string(y));
     }
-    return cell_states_[x * widwght_ + y];
+    return cell_states_[x * height_ + y];
 }
 
 
 bool Life::IsValid(size_t x, size_t y) const {
     return x >= 0 and y >= 0 and x < widwght_ and y < height_;
-
 }
 
 void Life::setStateValue_(size_t x, size_t y, bool state) {
-    cell_states_[x * widwght_ + y] = state;
+    cell_states_[x * height_ + y] = state;
 }
 
 void Life::setAliveCell(size_t x, size_t y) {
@@ -60,7 +58,7 @@ void Life::setDeadCell(size_t x, size_t y) {
 }
 
 
-std::ostream &operator<<(std::ostream &os, Life &life) {
+std::ostream& operator<<(std::ostream& os, Life& life) {
     for (size_t x = 0; x < life.getWidwght(); ++x) {
         for (size_t y = 0; y < life.getHeight(); ++y) {
             if (life.getCellState(x, y)) os << "* ";
@@ -110,4 +108,23 @@ void Life::fill() {
     std::transform(cell_states_.begin(), cell_states_.end(), cell_states_.begin(), [](bool item) {
         return bool(rand() % 2);;
     });
+}
+
+void Life::clear() {
+    for (size_t i = 0; i < cell_states_.size(); ++i) {
+        cell_states_[i] = false;
+    }
+}
+
+void Life::changeSize(int x, int y) {
+    std::vector<bool> tmp(cell_states_);
+    cell_states_.clear();
+    cell_states_.resize(x * y);
+    for (int i = 0; i < widwght_; ++i) {
+        for (int j = 0; j < height_; ++j) {
+            cell_states_[i * y + j] = tmp[i * height_ + j];
+        }
+    }
+    widwght_ = x;
+    height_ = y;
 }

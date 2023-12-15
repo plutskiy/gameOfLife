@@ -25,7 +25,7 @@ set(error_code 1)
 set(number_of_tries 0)
 while(error_code AND number_of_tries LESS 3)
   execute_process(
-    COMMAND "/opt/homebrew/bin/git" 
+    COMMAND "/opt/homebrew/bin/git"
             clone --no-checkout --config "advice.detachedHead=false" "https://github.com/google/googletest.git" "googletest-src"
     WORKING_DIRECTORY "/Users/plut/CLionProject/game/life_test/cmake-build-debug/_deps"
     RESULT_VARIABLE error_code
@@ -40,13 +40,13 @@ if(error_code)
 endif()
 
 execute_process(
-  COMMAND "/opt/homebrew/bin/git" 
-          checkout "release-1.12.0" --
+  COMMAND "/opt/homebrew/bin/git"
+          checkout "release-1.12.1" --
   WORKING_DIRECTORY "/Users/plut/CLionProject/game/life_test/cmake-build-debug/_deps/googletest-src"
   RESULT_VARIABLE error_code
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to checkout tag: 'release-1.12.0'")
+  message(FATAL_ERROR "Failed to checkout tag: 'release-1.12.1'")
 endif()
 
 set(init_submodules TRUE)

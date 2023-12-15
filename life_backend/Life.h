@@ -35,7 +35,11 @@ public:
 
     void fill();
 
-    std::ostream &operator<<(std::ostream &os, Life &life);
+    void clear();
+
+    void changeSize(int x,int y);
+
+    friend  std::ostream &operator<<(std::ostream &os, Life &life);
 
 private:
     void setStateValue_(size_t x, size_t y, bool state);

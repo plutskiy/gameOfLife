@@ -1,13 +1,13 @@
-/home/maria/Загрузки/CLion-2022.2.4/clion-2022.2.4/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/maria/Загрузки/CLion-2022.2.4/clion-2022.2.4/bin/ninja/linux/x64/ninja -G Ninja -S /home/maria/CLionProjects/plut_game_of_life_2/life_test -B /home/maria/CLionProjects/plut_game_of_life_2/life_test/cmake-build-debug
-CMake Error: The current CMakeCache.txt directory /home/maria/CLionProjects/plut_game_of_life_2/life_test/cmake-build-debug/_deps/googletest-subbuild/CMakeCache.txt is different than the directory /Users/plut/CLionProject/game/life_test/cmake-build-debug/_deps/googletest-subbuild where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+"/Users/plut/Applications/CLion Nova.app/Contents/bin/cmake/mac/aarch64/bin/cmake" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/Users/plut/Applications/CLion Nova.app/Contents/bin/ninja/mac/aarch64/ninja" -G Ninja -S /Users/plut/CLionProject/game/life_test -B /Users/plut/CLionProject/game/life_test/cmake-build-debug
+-- Configuring done (1.0s)
+CMake Error at CMakeLists.txt:15 (add_executable):
+  Cannot find source file:
 
-CMake Error at /home/maria/Загрузки/CLion-2022.2.4/clion-2022.2.4/bin/cmake/linux/x64/share/cmake-3.26/Modules/FetchContent.cmake:1610 (message):
-  CMake step for googletest failed: 1
-Call Stack (most recent call first):
-  /home/maria/Загрузки/CLion-2022.2.4/clion-2022.2.4/bin/cmake/linux/x64/share/cmake-3.26/Modules/FetchContent.cmake:1762:EVAL:2 (__FetchContent_directPopulate)
-  /home/maria/Загрузки/CLion-2022.2.4/clion-2022.2.4/bin/cmake/linux/x64/share/cmake-3.26/Modules/FetchContent.cmake:1762 (cmake_language)
-  /home/maria/Загрузки/CLion-2022.2.4/clion-2022.2.4/bin/cmake/linux/x64/share/cmake-3.26/Modules/FetchContent.cmake:1976 (FetchContent_Populate)
-  CMakeLists.txt:10 (FetchContent_MakeAvailable)
+    /Users/plut/CLionProject/game/life_test/life_backend/Life.h
 
 
--- Configuring incomplete, errors occurred!
+CMake Error at CMakeLists.txt:15 (add_executable):
+  No SOURCES given to target: game_tests
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

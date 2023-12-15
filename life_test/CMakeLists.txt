@@ -12,7 +12,7 @@ FetchContent_MakeAvailable(googletest)
 set(CMAKE_CXX_STANDARD 23)
 set(TEST_NAME ${PROJECT_NAME})
 
-add_executable(${TEST_NAME} life_tets.cpp ${CMAKE_SOURCE_DIR}/../life_backend/Life.h ${CMAKE_SOURCE_DIR}/../life_backend/Life.cpp)
+add_executable(${TEST_NAME} life_tets.cpp ${CMAKE_SOURCE_DIR}/life_backend/Life.h ${CMAKE_SOURCE_DIR}/life_backend/Life.cpp)
 
 target_include_directories(${TEST_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/life_backend)
 
