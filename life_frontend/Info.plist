@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleExecutable</key>
+    <string>life_frontend</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.yourcompany.yourapp</string>
+    <key>CFBundleName</key>
+    <string>Life Frontend</string>
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>10.10</string>
+    <key>NSPrincipalClass</key>
+    <string>NSApplication</string>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
+    <key>CFBundleDocumentTypes</key>
+    <array/>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>English</string>
+    <key>CFBundleLocalizations</key>
+    <array>
+        <string>English</string>
+    </array>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>LSApplicationCategoryType</key>
+    <string>public.app-category.games</string>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+        <string>MacOSX</string>
+    </array>
+    <key>DTPlatformName</key>
+    <string>macosx</string>
+    <key>DTSDKName</key>
+    <string>macosx10.15</string>
+    <key>CFBundleExecutablePath</key>
+    <string>@executable_path/life_frontend</string>
+    <key>CFBundleLibraries</key>
+    <array>
+        <string>@executable_path/../Frameworks/SDL2.dylib</string>
+        <string>@executable_path/../Frameworks/life_backend.dylib</string>
+    </array>
+</dict>
+</plist>

@@ -1,0 +1,4 @@
+// config.h.in
+#pragma once
+
+#define MY_VARIABLE "@MY_VARIABLE@"

@@ -1,0 +1,4 @@
+cmake-build-debug
+life_backend/cmake-build-debug
+life_frontend/cmake-build-debug
+life_test/cmake-build-debug

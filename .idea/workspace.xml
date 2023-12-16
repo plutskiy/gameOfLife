@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="game_of_life" targetName="gmock_main" />
+      <config projectName="game_of_life" targetName="gtest" />
+      <config projectName="game_of_life" targetName="gmock" />
+      <config projectName="game_of_life" targetName="life_backend" />
+      <config projectName="game_of_life" targetName="game_of_life" />
+      <config projectName="game_of_life" targetName="life_frontend" />
+      <config projectName="game_of_life" targetName="gtest_main" />
+      <config projectName="game_of_life" targetName="game_tests" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6cf60b04-52a6-4a31-9b12-4d21a5efbde8" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/vector" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/life_backend/Life.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/life_backend/Life.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/life_frontend/life_frontend.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/life_frontend/life_frontend.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/life_test/life_tets.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL_events.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL_render.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL_video.h" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="2.1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2UpqtI9FLkXoa6GzglsuW9d7bl5" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;CMake Application.game_of_life.executor&quot;: &quot;Debug&quot;,
+    &quot;CMake Application.life_backend.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.life_frontend.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Debug.Unnamed.executor&quot;: &quot;Debug&quot;,
+    &quot;CMake Debug.game.executor&quot;: &quot;Debug&quot;,
+    &quot;CMake Debug.game_tests.executor&quot;: &quot;Debug&quot;,
+    &quot;Google Test.All Tests.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.SETTERS.Alive.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.advertisement.text.has.clang-format&quot;: &quot;true&quot;,
+    &quot;cf.advertisement.text.overridden&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;ctest.advertisement.all.test.configuration.is.created&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;backend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/plut/CLionProject/game/libraries/x86&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/libraries/x86" />
+      <recent name="$PROJECT_DIR$/libraries" />
+      <recent name="$PROJECT_DIR$/libraries/arm64/macOS" />
+      <recent name="$PROJECT_DIR$/life_frontend/Frameworks" />
+      <recent name="$PROJECT_DIR$/life_frontend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/libraries/arm64/Linux" />
+      <recent name="$PROJECT_DIR$/libraries/arm64/Windows" />
+      <recent name="$PROJECT_DIR$/life_frontend" />
+      <recent name="$PROJECT_DIR$/life_frontend/includes" />
+      <recent name="$PROJECT_DIR$/libraries/arm64/macOS" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.life_frontend">
+    <configuration name="All Tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="game_of_life" TARGET_NAME="game_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="game_of_life" RUN_TARGET_NAME="game_tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All Tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="game_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="game_tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GETTERS.height" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="game_of_life" TARGET_NAME="game_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="game_of_life" RUN_TARGET_NAME="game_tests" TEST_CLASS="GETTERS" TEST_METHOD="height" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GETTERS.height" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="game_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="game_tests" TEST_CLASS="GETTERS" TEST_METHOD="height" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OPERATOR.COUT" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="game_of_life" TARGET_NAME="game_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="game_of_life" RUN_TARGET_NAME="game_tests" TEST_CLASS="OPERATOR" TEST_METHOD="COUT" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OPERATOR.COUT" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="game_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="game_tests" TEST_CLASS="OPERATOR" TEST_METHOD="COUT" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Random.Tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="game_of_life" TARGET_NAME="game_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="game_of_life" RUN_TARGET_NAME="game_tests" TEST_CLASS="Random" TEST_METHOD="Tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Random.Tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="game_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="game_tests" TEST_CLASS="Random" TEST_METHOD="Tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SETTERS.Alive" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="game_of_life" TARGET_NAME="game_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="game_of_life" RUN_TARGET_NAME="game_tests" TEST_CLASS="SETTERS" TEST_METHOD="Alive" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory">
+      <method v="2" />
+    </configuration>
+    <configuration name="game_tests" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="game_tests" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="game_of_life" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="game_of_life" TARGET_NAME="game_of_life" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="game_of_life" RUN_TARGET_NAME="game_of_life">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="game_tests" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="game_of_life" RUN_TARGET_NAME="game_testss" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="game_tests" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="game_testss" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="game_of_life" TARGET_NAME="gmock" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="game_of_life" TARGET_NAME="gmock_main" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="game_of_life" TARGET_NAME="gtest" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="game_of_life" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="life_backend" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="game_of_life" TARGET_NAME="life_backend" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="game_of_life" RUN_TARGET_NAME="life_backend">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="life_frontend" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="game_of_life" TARGET_NAME="life_frontend" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="game_of_life" RUN_TARGET_NAME="life_frontend">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All CTest" type="CTestRunConfiguration" factoryName="CTestRun" PROGRAM_PARAMS="--extra-verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$CMakeCurrentLocalGenerationDir$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$CTestCurrentExecutableName$" EXPLICIT_BUILD_TARGET_NAME="all" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All CTest" type="CTestRunConfiguration" factoryName="CTestRun" PROGRAM_PARAMS="--extra-verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$CMakeCurrentLocalGenerationDir$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$CTestCurrentExecutableName$" EXPLICIT_BUILD_TARGET_NAME="all" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.game_of_life" />
+      <item itemvalue="CMake Application.game_tests" />
+      <item itemvalue="CMake Application.gmock" />
+      <item itemvalue="CMake Application.gmock_main" />
+      <item itemvalue="CMake Application.gtest" />
+      <item itemvalue="CMake Application.gtest_main" />
+      <item itemvalue="CMake Application.life_backend" />
+      <item itemvalue="CMake Application.life_frontend" />
+      <item itemvalue="CMake Debug.Unnamed" />
+      <item itemvalue="CMake Debug.game_tests" />
+      <item itemvalue="CTest Application.All CTest" />
+      <item itemvalue="Google Test.All Tests" />
+      <item itemvalue="Google Test.GETTERS.height" />
+      <item itemvalue="Google Test.OPERATOR.COUT" />
+      <item itemvalue="Google Test.Random.Tests" />
+      <item itemvalue="Google Test.SETTERS.Alive" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Google Test.SETTERS.Alive" />
+        <item itemvalue="CMake Debug.game_tests" />
+        <item itemvalue="Google Test.Random.Tests" />
+        <item itemvalue="Google Test.GETTERS.height" />
+        <item itemvalue="Google Test.OPERATOR.COUT" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6cf60b04-52a6-4a31-9b12-4d21a5efbde8" name="Changes" comment="" />
+      <created>1693647082391</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1693647082391</updated>
+      <workItem from="1693647083950" duration="2374000" />
+      <workItem from="1693652463714" duration="14000" />
+      <workItem from="1693664918677" duration="3611000" />
+      <workItem from="1693678966875" duration="799000" />
+      <workItem from="1693679778167" duration="58000" />
+      <workItem from="1693679844538" duration="4323000" />
+      <workItem from="1693855874348" duration="18434000" />
+      <workItem from="1693955276584" duration="598000" />
+      <workItem from="1693956004570" duration="223000" />
+      <workItem from="1693957569126" duration="611000" />
+      <workItem from="1694025399971" duration="7000" />
+      <workItem from="1694026808333" duration="793000" />
+      <workItem from="1695405677059" duration="108000" />
+      <workItem from="1695410695617" duration="709000" />
+      <workItem from="1695459559045" duration="5107000" />
+      <workItem from="1695469191142" duration="1047000" />
+      <workItem from="1695552431252" duration="54000" />
+      <workItem from="1695568115579" duration="1196000" />
+      <workItem from="1695659876478" duration="355000" />
+      <workItem from="1695665256206" duration="75000" />
+      <workItem from="1696080544332" duration="952000" />
+      <workItem from="1696081706027" duration="8000" />
+      <workItem from="1696278669673" duration="53000" />
+      <workItem from="1696279233630" duration="67000" />
+      <workItem from="1696525666058" duration="1577000" />
+      <workItem from="1696607983699" duration="158000" />
+      <workItem from="1696608151414" duration="172000" />
+      <workItem from="1696632091445" duration="111000" />
+      <workItem from="1696632210190" duration="43000" />
+      <workItem from="1696632260782" duration="391000" />
+      <workItem from="1696669983004" duration="108000" />
+      <workItem from="1696670183928" duration="612000" />
+      <workItem from="1696671651961" duration="627000" />
+      <workItem from="1696686728044" duration="4331000" />
+      <workItem from="1696701421380" duration="3360000" />
+      <workItem from="1696957922713" duration="44000" />
+      <workItem from="1698487934587" duration="1861000" />
+      <workItem from="1698591691152" duration="14000" />
+      <workItem from="1699833456293" duration="1190000" />
+      <workItem from="1699913953707" duration="463000" />
+      <workItem from="1700301254227" duration="15000" />
+      <workItem from="1700301278731" duration="2222000" />
+      <workItem from="1700354245165" duration="83000" />
+      <workItem from="1700433766591" duration="3762000" />
+      <workItem from="1700499908235" duration="32000" />
+      <workItem from="1700862921789" duration="1211000" />
+      <workItem from="1700929141812" duration="1374000" />
+      <workItem from="1700932470533" duration="2582000" />
+      <workItem from="1700936688883" duration="27070000" />
+      <workItem from="1700996059130" duration="2477000" />
+      <workItem from="1701010516313" duration="9323000" />
+      <workItem from="1701028831701" duration="16223000" />
+      <workItem from="1701090709419" duration="2057000" />
+      <workItem from="1701098914412" duration="7856000" />
+      <workItem from="1701200939835" duration="8734000" />
+      <workItem from="1701443523629" duration="863000" />
+      <workItem from="1701457465937" duration="1338000" />
+      <workItem from="1701460658224" duration="1966000" />
+      <workItem from="1701469466875" duration="83000" />
+      <workItem from="1701477700180" duration="206000" />
+      <workItem from="1701507079970" duration="4359000" />
+      <workItem from="1701546358439" duration="235000" />
+      <workItem from="1701631705646" duration="208000" />
+      <workItem from="1701633708560" duration="176000" />
+      <workItem from="1701634560843" duration="308000" />
+      <workItem from="1701636919710" duration="38000" />
+      <workItem from="1701703748007" duration="990000" />
+      <workItem from="1701705023626" duration="138000" />
+      <workItem from="1701710182255" duration="12000" />
+      <workItem from="1701802103750" duration="526000" />
+      <workItem from="1701888156184" duration="435000" />
+      <workItem from="1702051022675" duration="706000" />
+      <workItem from="1702061957434" duration="13000" />
+      <workItem from="1702076193200" duration="3198000" />
+      <workItem from="1702083661566" duration="278000" />
+      <workItem from="1702107090477" duration="8615000" />
+      <workItem from="1702137036361" duration="769000" />
+      <workItem from="1702144105674" duration="562000" />
+      <workItem from="1702150301223" duration="607000" />
+      <workItem from="1702151532362" duration="8498000" />
+      <workItem from="1702223819977" duration="575000" />
+      <workItem from="1702224419954" duration="1102000" />
+      <workItem from="1702282334714" duration="26000" />
+      <workItem from="1702282698364" duration="38000" />
+      <workItem from="1702320276878" duration="27000" />
+      <workItem from="1702668356879" duration="797000" />
+      <workItem from="1702671411918" duration="3443000" />
+      <workItem from="1702674888772" duration="1814000" />
+      <workItem from="1702676721269" duration="98000" />
+      <workItem from="1702685672776" duration="27000" />
+      <workItem from="1702716716621" duration="403000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="CMakeExceptionBreakpoint" />
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="pathToExecutable" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="../../../../CLionProject/game/cmake-build-debug-coverage-1" NAME="All CTest Coverage Results" MODIFIED="1693776729777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="../../../../CLionProject/game/cmake-build-debug-coverage" NAME="All Tests Coverage Results" MODIFIED="1693956116908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
