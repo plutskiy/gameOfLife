@@ -11,7 +11,6 @@
 #include <filesystem>
 #include "variables.h"
 
-
 static bool quit = false;
 static bool isPaused = false;
 static bool isLeftButtonDown = false;

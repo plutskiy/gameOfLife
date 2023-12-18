@@ -46,7 +46,7 @@ private:
     void* sdlLibrary;
 
     template <typename T>
-    T LoadFunction(const char* name, bool closeOnFailure = true) {
+    T LoadFunction(const char* name) {
         T func;
 #if defined(_WIN32) || defined(_WIN64)
         func = reinterpret_cast<T>(GetProcAddress((HMODULE)sdlLibrary, name));
@@ -67,10 +67,17 @@ private:
 
 public:
     explicit SDLInterfaceLoader(const char* libraryPath) {
+#if defined(_WIN32) || defined(_WIN64)
+        sdlLibrary = LoadLibrary(libraryPath);
+#else
         sdlLibrary = dlopen(libraryPath, RTLD_NOW);
+#endif
         if (!sdlLibrary) {
-            std::cerr << "Error loading SDL library: " << dlerror() << std::endl;
-            exit(EXIT_FAILURE);
+#if defined(_WIN32) || defined(_WIN64)
+            std::cerr << "Error loading SDL library " << ": " << GetLastError() << std::endl;
+#else
+            std::cerr << "Error loading SDL library " << ": " << dlerror() << std::endl;
+#endif
         }
     }
 
