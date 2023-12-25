@@ -9,5 +9,5 @@ add_executable(game_of_life life_frontend/life_frontend.cpp)
 target_link_libraries(game_of_life ${SDL2_LIBRARIES} life_backend)
 add_subdirectory(life_backend)
 add_subdirectory(life_frontend)
-add_dependencies(game_of_life life_frontend)  # Add this line
+add_dependencies(game_of_life life_frontend) 
 add_subdirectory(life_test)
