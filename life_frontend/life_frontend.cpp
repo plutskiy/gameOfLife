@@ -193,7 +193,11 @@ int main(int argc, char* argv[]) {
     auto pathToExecutable = ::getExecutablePath();
     auto pathToDirWhereExecutable = std::filesystem::path(pathToExecutable.string()).parent_path().parent_path();
     std::string SDL_LIBRARY_NAME = MY_VARIABLE;
+#if defined(__APPLE__)
     auto pathToSdlLibrary = pathToDirWhereExecutable / "Frameworks" / MY_VARIABLE;
+#else
+    auto pathToSdlLibrary = pathToDirWhereExecutable  / MY_VARIABLE;
+#endif
     SDLInterfaceLoader sdlLoader(pathToSdlLibrary.c_str());
 
     if (sdlLoader.Init(SDL_INIT_VIDEO) < 0) {

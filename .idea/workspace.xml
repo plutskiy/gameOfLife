@@ -28,7 +28,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cf60b04-52a6-4a31-9b12-4d21a5efbde8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/life_frontend/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/life_frontend/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/life_frontend/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/life_frontend/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/life_frontend/life_frontend.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/life_frontend/life_frontend.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +57,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/life_backend/Life.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/life_backend/Life.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/plut/CLionProject/game/life_frontend/life_frontend.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/plut/CLionProject/game/life_frontend/life_frontend.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/life_frontend/CMakeLists.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/life_frontend/life_frontend.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/life_frontend/variables.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/life_test/life_tets.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///opt/homebrew/Cellar/sdl2/2.28.5/include/SDL2/SDL_events.h" root0="FORCE_HIGHLIGHTING" />
@@ -82,7 +88,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;CMake Application.game_of_life.executor&quot;: &quot;Debug&quot;,
+    &quot;CMake Application.game_of_life.executor&quot;: &quot;Run&quot;,
     &quot;CMake Application.life_backend.executor&quot;: &quot;Run&quot;,
     &quot;CMake Application.life_frontend.executor&quot;: &quot;Run&quot;,
     &quot;CMake Debug.Unnamed.executor&quot;: &quot;Debug&quot;,
@@ -102,33 +108,33 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;ctest.advertisement.all.test.configuration.is.created&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;backend&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/plut/CLionProject/game/libraries/x86/macOS&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/plut/CLionProject/game/life_frontend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/life_frontend" />
+      <recent name="$PROJECT_DIR$/cmake-build-debug/life_frontend/life_frontend.app/Contents" />
       <recent name="$PROJECT_DIR$/libraries/x86/macOS" />
       <recent name="$PROJECT_DIR$/libraries/arm64/macOS" />
       <recent name="$PROJECT_DIR$/libraries/x86/Linux" />
-      <recent name="$PROJECT_DIR$/libraries/x86" />
-      <recent name="$PROJECT_DIR$/libraries" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Resources" />
+      <recent name="$PROJECT_DIR$/life_frontend" />
       <recent name="$PROJECT_DIR$/libraries/arm64/Linux" />
       <recent name="$PROJECT_DIR$/libraries/arm64/Windows" />
-      <recent name="$PROJECT_DIR$/life_frontend" />
       <recent name="$PROJECT_DIR$/life_frontend/includes" />
-      <recent name="$PROJECT_DIR$/libraries/arm64/macOS" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.life_frontend">
+  <component name="RunManager" selected="CMake Application.game_of_life">
     <configuration name="All Tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="game_of_life" TARGET_NAME="game_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="game_of_life" RUN_TARGET_NAME="game_tests" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -192,6 +198,11 @@
     <configuration name="game_tests" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
       <method v="2" />
     </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="game_of_life" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="game_of_life" TARGET_NAME="game_of_life" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="game_of_life" RUN_TARGET_NAME="game_of_life">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -250,13 +261,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Google Test.All Tests" />
-      <item itemvalue="Google Test.GETTERS.height" />
-      <item itemvalue="Google Test.OPERATOR.COUT" />
-      <item itemvalue="Google Test.Random.Tests" />
-      <item itemvalue="Google Test.SETTERS.Alive" />
-      <item itemvalue="CMake Debug.Unnamed" />
-      <item itemvalue="CMake Debug.game_tests" />
       <item itemvalue="CMake Application.game_of_life" />
       <item itemvalue="CMake Application.game_tests" />
       <item itemvalue="CMake Application.gmock" />
@@ -265,15 +269,22 @@
       <item itemvalue="CMake Application.gtest_main" />
       <item itemvalue="CMake Application.life_backend" />
       <item itemvalue="CMake Application.life_frontend" />
+      <item itemvalue="CMake Debug.Unnamed" />
+      <item itemvalue="CMake Debug.game_tests" />
       <item itemvalue="CTest Application.All CTest" />
+      <item itemvalue="Google Test.All Tests" />
+      <item itemvalue="Google Test.GETTERS.height" />
+      <item itemvalue="Google Test.OPERATOR.COUT" />
+      <item itemvalue="Google Test.Random.Tests" />
+      <item itemvalue="Google Test.SETTERS.Alive" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Google Test.SETTERS.Alive" />
         <item itemvalue="CMake Debug.game_tests" />
+        <item itemvalue="Google Test.SETTERS.Alive" />
         <item itemvalue="Google Test.Random.Tests" />
-        <item itemvalue="Google Test.GETTERS.height" />
         <item itemvalue="Google Test.OPERATOR.COUT" />
+        <item itemvalue="Google Test.GETTERS.height" />
       </list>
     </recent_temporary>
   </component>
@@ -382,7 +393,20 @@
       <workItem from="1702838424690" duration="5000" />
       <workItem from="1702901626589" duration="2725000" />
       <workItem from="1702907369611" duration="224000" />
-      <workItem from="1702907619615" duration="8000" />
+      <workItem from="1702907619615" duration="737000" />
+      <workItem from="1702920210523" duration="72000" />
+      <workItem from="1702920294559" duration="77000" />
+      <workItem from="1702920384668" duration="425000" />
+      <workItem from="1702937122042" duration="29000" />
+      <workItem from="1702937791281" duration="68000" />
+      <workItem from="1702937870661" duration="127000" />
+      <workItem from="1703430265401" duration="298000" />
+      <workItem from="1703430625746" duration="4837000" />
+      <workItem from="1703456638689" duration="66000" />
+      <workItem from="1703459438208" duration="1215000" />
+      <workItem from="1703460696218" duration="91000" />
+      <workItem from="1703501911563" duration="280000" />
+      <workItem from="1703502211481" duration="1319000" />
     </task>
     <servers />
   </component>
