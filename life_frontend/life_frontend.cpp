@@ -187,6 +187,45 @@ namespace {
     }
 }
 
+#if defined(_WIN32) || defined(_WIN64)
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd) {
+    Life life = Life(35, 50);
+    life.fill();
+    auto pathToExecutable = ::getExecutablePath();
+    auto pathToDirWhereExecutable = std::filesystem::path(pathToExecutable.string()).parent_path().parent_path();
+    std::string SDL_LIBRARY_NAME = MY_VARIABLE;
+#if defined(__APPLE__)
+    auto pathToSdlLibrary = pathToDirWhereExecutable / "Frameworks" / MY_VARIABLE;
+#else
+    auto pathToSdlLibrary = pathToDirWhereExecutable  / MY_VARIABLE;
+#endif
+    SDLInterfaceLoader sdlLoader(pathToSdlLibrary.c_str());
+
+    if (sdlLoader.Init(SDL_INIT_VIDEO) < 0) {
+        std::cerr << "SDL initialization failed: " << sdlLoader.GetError() << std::endl;
+        return -1;
+    }
+
+    SDL_Window* window = sdlLoader.CreateWindow(
+        "Game of life", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+        life.getWidwght() * cellsize, life.getHeight() * cellsize, SDL_WINDOW_RESIZABLE);
+    if (!window) {
+        std::cerr << "Window creation failed: " << sdlLoader.GetError() << std::endl;
+        return -1;
+    }
+    SDL_Renderer* renderer = sdlLoader.CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    if (!renderer) {
+        std::cerr << "Renderer creation failed: " << sdlLoader.GetError() << std::endl;
+        return -1;
+    }
+    inputHandler(life, sdlLoader, window, renderer);
+    sdlLoader.DestroyRenderer(renderer);
+    sdlLoader.DestroyWindow(window);
+    sdlLoader.Quit();
+
+    return 0;
+    }
+#else
 int main(int argc, char* argv[]) {
     Life life = Life(35, 50);
     life.fill();
@@ -223,4 +262,5 @@ int main(int argc, char* argv[]) {
     sdlLoader.Quit();
 
     return 0;
-}
+    }
+#endif

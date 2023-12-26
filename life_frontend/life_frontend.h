@@ -1,7 +1,12 @@
 #pragma once
 
 #include <iostream>
+#if defined(_WIN32) || defined(_WIN64)
+   #include "Windows.h"
+#else
 #include <dlfcn.h>
+
+#endif
 #include <SDL.h>
 
 typedef int (*SDL_InitFunc)(Uint32 flags);
@@ -43,7 +48,11 @@ public:
 
 class SDLInterfaceLoader : public SDLInterface {
 private:
+#if defined(_WIN32) || defined(_WIN64)
+    HMODULE sdlLibrary;
+#else
     void* sdlLibrary;
+#endif
 
     template <typename T>
     T LoadFunction(const char* name) {
