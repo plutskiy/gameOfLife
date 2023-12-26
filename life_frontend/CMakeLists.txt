@@ -24,18 +24,19 @@ target_link_libraries(${PROJECT_NAME} life_backend)
 if (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
     set(CURRENT_OS "Linux")
     set(CURRENT_EXT "so")
-    set(MY_VARIABLE "SDL2.${CURRENT_EXT}")
-    cmake_path(APPEND SDL_PATH_FULL "${CMAKE_SOURCE_DIR}" "libraries" "${ARCH}" "${CURRENT_OS}" "SDL2.${CURRENT_EXT}")
+    set(MY_VARIABLE "libSDL2.${CURRENT_EXT}")
+    cmake_path(APPEND SDL_PATH_FULL "${CMAKE_SOURCE_DIR}" "libraries" "${ARCH}" "${CURRENT_OS}" "libSDL2.${CURRENT_EXT}")
     add_custom_command(TARGET ${PROJECT_NAME} PRE_BUILD
-            COMMAND ${CMAKE_COMMAND} -E copy ${SDL_PATH_FULL} ${CMAKE_BINARY_DIR}
+            COMMAND ${CMAKE_COMMAND} -E copy ${SDL_PATH_FULL} ${MY_VARIABLE}
     )
+    set(CMAKE_EXE_LINKER_FLAGS "-Wl,-export-dynamic")
 elseif (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     set(CURRENT_OS "Windows")
     set(CURRENT_EXT "dll")
     set(MY_VARIABLE "SDL2.${CURRENT_EXT}")
     cmake_path(APPEND SDL_PATH_FULL "${CMAKE_SOURCE_DIR}" "libraries" "${ARCH}" "${CURRENT_OS}" "SDL2.${CURRENT_EXT}.")
     add_custom_command(TARGET ${PROJECT_NAME} PRE_BUILD
-            COMMAND ${CMAKE_COMMAND} -E copy ${SDL_PATH_FULL} ${CMAKE_BINARY_DIR}
+            COMMAND ${CMAKE_COMMAND} -E copy ${SDL_PATH_FULL} ${MY_VARIABLE}
     )
     set_target_properties(${PROJECT_NAME} PROPERTIES
             WIN32_EXECUTABLE TRUE
