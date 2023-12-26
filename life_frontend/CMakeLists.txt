@@ -1,17 +1,17 @@
-cmake_minimum_required(VERSION 3.26)
+cmake_minimum_required(VERSION 3.24)
 project(life_frontend)
 
 set(CMAKE_CXX_STANDARD 23)
 set(DYNAMIC_LIBS_PATH ${CMAKE_SOURCE_DIR})
 
 if (CMAKE_SYSTEM_PROCESSOR STREQUAL "arm64")
-    message("Target architecture: ARM")
+    message(STATUS "Target architecture: ARM")
     set(ARCH "arm64")
 elseif (CMAKE_SYSTEM_PROCESSOR STREQUAL "x86_64")
-    message("Target architecture: x86_64 (x64)")
-    set(ARCH "x86_64")
+    message(STATUS "Target architecture: x86_64 (x64)")
+    set(ARCH "x86_64") #/// плут плут папку тоже тогда нужно так назвать )
 elseif (CMAKE_SYSTEM_PROCESSOR STREQUAL "x86")
-    message("Target architecture: x86")
+    message(STATUS "Target architecture: x86")
     set(ARCH "x86")
 else ()
     message(FATAL_ERROR "Unsupported architecture: ${CMAKE_SYSTEM_PROCESSOR}")
@@ -19,8 +19,10 @@ endif ()
 
 add_executable(${PROJECT_NAME} life_frontend.h life_frontend.cpp ../life_backend/Life.h)
 cmake_path(APPEND SDL_INCLUDE_PATH "${CMAKE_SOURCE_DIR}" "libraries" "include")
+message(STATUS "Path to SDL includes: ${SDL_INCLUDE_PATH}")
+target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${SDL_INCLUDE_PATH})
 target_link_libraries(${PROJECT_NAME} life_backend)
-
+include_directories(${PROJECT_NAME} ${SDL_INCLUDE_PATH})
 if (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
     set(CURRENT_OS "Linux")
     set(CURRENT_EXT "so")
@@ -60,7 +62,7 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "AppleClang")
             COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/logo.png $<TARGET_BUNDLE_DIR:${PROJECT_NAME}>/Contents/Resources/
             COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/Info.plist $<TARGET_BUNDLE_DIR:${PROJECT_NAME}>/
     )
-    message("SDL full path directory: ${SDL_PATH_FULL}")
+    message(STATUS "SDL full path directory: ${SDL_PATH_FULL}")
     set_target_properties(${PROJECT_NAME} PROPERTIES
             MACOSX_BUNDLE TRUE
             MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_SOURCE_DIR}/Info.plist
@@ -71,5 +73,4 @@ else ()
 endif ()
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/variables.h.in ${CMAKE_CURRENT_SOURCE_DIR}/variables.h)
-target_include_directories(${PROJECT_NAME} PUBLIC ${SDL_INCLUDE_PATH})
 

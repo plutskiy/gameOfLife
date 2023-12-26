@@ -1,13 +1,14 @@
 #pragma once
 
+// <- в данном случае не системная библиотекка
 #include <iostream>
 #if defined(_WIN32) || defined(_WIN64)
    #include "Windows.h"
 #else
 #include <dlfcn.h>
-
 #endif
-#include <SDL.h>
+
+#include "SDL.h"
 
 typedef int (*SDL_InitFunc)(Uint32 flags);
 typedef SDL_Window* (*SDL_CreateWindowFunc)(const char* title, int x, int y, int w, int h, Uint32 flags);
