@@ -29,7 +29,7 @@ typedef int (*SDL_RenderSetLogicalSizeFunc)(SDL_Renderer* renderer, int w, int h
 class SDLInterface {
 public:
     virtual int Init(Uint32 flags) = 0;
-    virtual SDL_Window* CreateWindow(const char* title, int x, int y, int w, int h, Uint32 flags) = 0;
+    virtual SDL_Window* createWindow(const char* title, int x, int y, int w, int h, Uint32 flags) = 0;
     virtual SDL_Renderer* CreateRenderer(SDL_Window* window, int index, Uint32 flags) = 0;
     virtual int SetRenderDrawColor(SDL_Renderer* renderer, Uint8 r, Uint8 g, Uint8 b, Uint8 a) = 0;
     virtual int RenderClear(SDL_Renderer* renderer) = 0;
@@ -104,7 +104,7 @@ public:
         return func(flags);
     }
 
-    SDL_Window* CreateWindow(const char* title, int x, int y, int w, int h, Uint32 flags) override {
+    SDL_Window* createWindow(const char* title, int x, int y, int w, int h, Uint32 flags) override {
         auto func = LoadFunction<SDL_CreateWindowFunc>("SDL_CreateWindow");
         return func(title, x, y, w, h, flags);
     }

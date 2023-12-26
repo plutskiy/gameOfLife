@@ -206,7 +206,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
         return -1;
     }
 
-    SDL_Window* window = sdlLoader.CreateWindow(
+    SDL_Window* window = sdlLoader.createWindow(
         "Game of life", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
         life.getWidwght() * cellsize, life.getHeight() * cellsize, SDL_WINDOW_RESIZABLE);
     if (!window) {
@@ -244,7 +244,7 @@ int main(int argc, char* argv[]) {
         return -1;
     }
 
-    SDL_Window* window = sdlLoader.CreateWindow(
+    SDL_Window* window = sdlLoader.createWindow(
         "Game of life", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
         life.getWidwght() * cellsize, life.getHeight() * cellsize, SDL_WINDOW_RESIZABLE);
     if (!window) {
