@@ -33,8 +33,10 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
     cmake_path(APPEND SDL_PATH_FULL "${CMAKE_SOURCE_DIR}" "libraries" "${ARCH}" "${CURRENT_OS}" "libSDL2.${CURRENT_EXT}")
     add_custom_command(TARGET ${PROJECT_NAME} PRE_BUILD
             COMMAND ${CMAKE_COMMAND} -E copy ${SDL_PATH_FULL} ${MY_VARIABLE}
+            COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/logo.png ${CMAKE_CURRENT_BINARY_DIR}
     )
-    set(CMAKE_EXE_LINKER_FLAGS "-Wl,-export-dynamic")
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/info.desktop.in ${CMAKE_CURRENT_BINARY_DIR}/info.desktop)
+    file(COPY ${CMAKE_CURRENT_BINARY_DIR}/info.desktop DESTINATION $ENV{HOME}/.local/share/applications/)
 elseif (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     set(CURRENT_OS "Windows")
     set(CURRENT_EXT "dll")

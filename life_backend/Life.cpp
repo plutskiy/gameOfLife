@@ -1,7 +1,7 @@
 #include "Life.h"
 #include <algorithm>
 #include <string>
-reinterpret_cast<T&>(func) = reinterpret_cast<T>(GetProcAddress(sdlLibrary, name));
+
 Life::Life(size_t wighth, size_t height) : widwght_(wighth), height_(height) {
     if (wighth < 3 and height < 3) {
         throw LifeExeption("Wrong size!");

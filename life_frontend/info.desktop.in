@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Game of Life
+path=@CMAKE_CURRENT_BINARY_DIR@
+Exec=life_frontend
+Icon=logo.png
+Terminal=false
+Type=Application
+Categories=Game;Languages;C++;
