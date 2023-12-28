@@ -121,9 +121,17 @@ void Life::changeSize(int x, int y) {
     std::vector<bool> tmp(cell_states_);
     cell_states_.clear();
     cell_states_.resize(x * y);
-    for (int i = 0; i < widwght_; ++i) {
-        for (int j = 0; j < height_; ++j) {
-            cell_states_[i * y + j] = tmp[i * height_ + j];
+    if (cell_states_.size() < tmp.size()) {
+        for (int i = 0; i < x; ++i) {
+            for (int j = 0; j < y; ++j) {
+                cell_states_[i * y + j] = tmp[i * height_ + j];
+            }
+        }
+    }  else {
+        for (int i = 0; i < widwght_; ++i) {
+            for (int j = 0; j < height_; ++j) {
+                cell_states_[i * y + j] = tmp[i * height_ + j];
+            }
         }
     }
     widwght_ = x;

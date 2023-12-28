@@ -193,13 +193,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     life.fill();
     auto pathToExecutable = ::getExecutablePath();
     auto pathToDirWhereExecutable = std::filesystem::path(pathToExecutable.string()).parent_path().parent_path();
-    std::string SDL_LIBRARY_NAME = MY_VARIABLE;
-#if defined(__APPLE__)
-    auto pathToSdlLibrary = pathToDirWhereExecutable / "Frameworks" / MY_VARIABLE;
-#else
-    auto pathToSdlLibrary = pathToDirWhereExecutable  / MY_VARIABLE;
-#endif
-    SDLInterfaceLoader sdlLoader(pathToSdlLibrary.c_str());
+    auto pathToSdlLibrary = pathToDirWhereExecutable / "life_frontend" / MY_VARIABLE;
+    SDLInterfaceLoader sdlLoader(pathToSdlLibrary.string());
 
     if (sdlLoader.Init(SDL_INIT_VIDEO) < 0) {
         std::cerr << "SDL initialization failed: " << sdlLoader.GetError() << std::endl;
@@ -213,11 +208,20 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
         std::cerr << "Window creation failed: " << sdlLoader.GetError() << std::endl;
         return -1;
     }
+    SDL_Surface* icon = sdlLoader.LoadBMP("logo.bmp");
+    if (icon == NULL) {
+        std::cerr << "Unable to load icon: " << sdlLoader.GetError() << '\n';
+        return 1;
+    }
+    sdlLoader.SetWindowIcon(window, icon);
+    sdlLoader.FreeSurface(icon);
+
     SDL_Renderer* renderer = sdlLoader.CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
     if (!renderer) {
         std::cerr << "Renderer creation failed: " << sdlLoader.GetError() << std::endl;
         return -1;
     }
+
     inputHandler(life, sdlLoader, window, renderer);
     sdlLoader.DestroyRenderer(renderer);
     sdlLoader.DestroyWindow(window);

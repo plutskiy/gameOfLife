@@ -20,7 +20,7 @@ else ()
     message(FATAL_ERROR "Unsupported architecture: ${CMAKE_SYSTEM_PROCESSOR}")
 endif ()
 
-add_executable(${PROJECT_NAME} life_frontend.h life_frontend.cpp ../life_backend/Life.h)
+add_executable(${PROJECT_NAME} life_frontend.h life_frontend.cpp ../life_backend/Life.h ../life_backend/Life.cpp)
 cmake_path(APPEND SDL_INCLUDE_PATH "${CMAKE_SOURCE_DIR}" "libraries" "include")
 message(STATUS "Path to SDL includes: ${SDL_INCLUDE_PATH}")
 target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${SDL_INCLUDE_PATH})
@@ -41,10 +41,11 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     set(CURRENT_OS "Windows")
     set(CURRENT_EXT "dll")
     set(MY_VARIABLE "SDL2.${CURRENT_EXT}")
-    cmake_path(APPEND SDL_PATH_FULL "${CMAKE_SOURCE_DIR}" "libraries" "${ARCH}" "${CURRENT_OS}" "SDL2.${CURRENT_EXT}.")
+    cmake_path(APPEND SDL_PATH_FULL "${CMAKE_SOURCE_DIR}" "libraries" "${ARCH}" "${CURRENT_OS}" "SDL2.${CURRENT_EXT}")
     add_custom_command(TARGET ${PROJECT_NAME} PRE_BUILD
             COMMAND ${CMAKE_COMMAND} -E copy ${SDL_PATH_FULL} ${MY_VARIABLE}
     )
+    target_sources(${PROJECT_NAME} PRIVATE info.rc)
     set_target_properties(${PROJECT_NAME} PROPERTIES
             WIN32_EXECUTABLE TRUE
     )

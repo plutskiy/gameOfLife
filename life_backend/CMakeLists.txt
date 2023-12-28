@@ -11,4 +11,8 @@ set(HEADERS
         Life.h
 )
 
-add_library(${PROJECT_NAME} SHARED Life.cpp)
+if (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
+    add_library(${PROJECT_NAME} STATIC Life.cpp)
+else ()
+    add_library(${PROJECT_NAME} SHARED Life.cpp)
+endif ()

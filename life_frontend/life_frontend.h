@@ -2,6 +2,7 @@
 
 // <- в данном случае не системная библиотекка
 #include <iostream>
+#include <string>
 #if defined(_WIN32) || defined(_WIN64)
    #include "Windows.h"
 #else
@@ -25,6 +26,9 @@ typedef const char* (*SDL_GetErrorFunc)();
 typedef void (*SDL_DelayFunc)(Uint32 ms);
 typedef int (*SDL_RenderDrawLineFunc)(SDL_Renderer* renderer, int x1, int y1, int x2, int y2);
 typedef int (*SDL_RenderSetLogicalSizeFunc)(SDL_Renderer* renderer, int w, int h);
+typedef SDL_Surface* (*SDL_LoadBMPFunc)(const char* file);
+typedef void (*SDL_SetWindowIconFunc)(SDL_Window * window, SDL_Surface * icon);
+typedef void (*SDL_FreeSurfaceFunc)(SDL_Surface * surface);
 
 class SDLInterface {
 public:
@@ -43,6 +47,9 @@ public:
     virtual void Quit() = 0;
     virtual int DrawLine(SDL_Renderer* renderer, int x1, int y1, int x2, int y2) = 0;
     virtual int SetLogicalSize(SDL_Renderer* renderer, int w, int h) = 0;
+    virtual SDL_Surface* LoadBMP(const char* file) = 0;
+    virtual void SetWindowIcon(SDL_Window * window, SDL_Surface * icon) = 0;
+    virtual void FreeSurface(SDL_Surface * surface) = 0;
 
     virtual ~SDLInterface() = default;
 };
@@ -50,7 +57,7 @@ public:
 class SDLInterfaceLoader : public SDLInterface {
 private:
 #if defined(_WIN32) || defined(_WIN64)
-    HMODULE sdlLibrary;
+    HINSTANCE sdlLibrary;
 #else
     void* sdlLibrary;
 #endif
@@ -59,7 +66,7 @@ private:
     T LoadFunction(const char* name) {
         T func;
 #if defined(_WIN32) || defined(_WIN64)
-        func = reinterpret_cast<T>(GetProcAddress((HMODULE)sdlLibrary, name));
+        func = reinterpret_cast<T>(GetProcAddress((HINSTANCE)sdlLibrary, name));
 #else
         func = reinterpret_cast<T>(dlsym(sdlLibrary, name));
 #endif
@@ -76,11 +83,11 @@ private:
     }
 
 public:
-    explicit SDLInterfaceLoader(const char* libraryPath) {
+    explicit SDLInterfaceLoader(std::string libraryPath) {
 #if defined(_WIN32) || defined(_WIN64)
-        sdlLibrary = LoadLibrary(libraryPath);
+        sdlLibrary = LoadLibrary(libraryPath.c_str());
 #else
-        sdlLibrary = dlopen(libraryPath, RTLD_NOW);
+        sdlLibrary = dlopen(libraryPath.c_str(), RTLD_NOW);
 #endif
         if (!sdlLibrary) {
 #if defined(_WIN32) || defined(_WIN64)
@@ -167,6 +174,20 @@ public:
     int SetLogicalSize(SDL_Renderer* renderer, int w, int h) override {
         auto func = LoadFunction<SDL_RenderSetLogicalSizeFunc>("SDL_RenderSetLogicalSize");
         return func(renderer, w, h);
+    }
+
+    SDL_Surface * LoadBMP(const char *file){
+        auto func = LoadFunction<SDL_LoadBMPFunc>("SDL_LoadBMP");
+        return func(file);
+    }
+    void SetWindowIcon(SDL_Window * window, SDL_Surface * icon){
+        auto func = LoadFunction<SDL_SetWindowIconFunc>("SDL_SetWindowIcon");
+        return func(window, icon);
+    }
+
+    void FreeSurface(SDL_Surface * surface){
+        auto func = LoadFunction<SDL_FreeSurfaceFunc>("SDL_FreeSurface");
+        return func(surface);
     }
 
     void Quit() override {
