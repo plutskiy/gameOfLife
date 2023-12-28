@@ -43,7 +43,7 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     set(MY_VARIABLE "SDL2.${CURRENT_EXT}")
     cmake_path(APPEND SDL_PATH_FULL "${CMAKE_SOURCE_DIR}" "libraries" "${ARCH}" "${CURRENT_OS}" "SDL2.${CURRENT_EXT}")
     add_custom_command(TARGET ${PROJECT_NAME} PRE_BUILD
-            COMMAND ${CMAKE_COMMAND} -E copy ${SDL_PATH_FULL} ${MY_VARIABLE}
+            COMMAND ${CMAKE_COMMAND} -E copy ${SDL_PATH_FULL} ${CMAKE_CURRENT_BINARY_DIR}
     )
     target_sources(${PROJECT_NAME} PRIVATE info.rc)
     set_target_properties(${PROJECT_NAME} PROPERTIES
