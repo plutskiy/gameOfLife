@@ -2,7 +2,7 @@
 Version=1.0
 Name=Game of Life
 Exec=@CMAKE_CURRENT_BINARY_DIR@/life_frontend
-Icon=logo
+Icon=@CMAKE_CURRENT_SOURCE_DIR@/logo.png
 Terminal=false
 Type=Application
 Categories=Game;Education;X-C++;
