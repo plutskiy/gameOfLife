@@ -1,1 +1,5 @@
 IDI_ICON1               ICON    DISCARDABLE     "logo.ico"
+#include "windows.h"
+
+#pragma comment(lib, "${CMAKE_CURRENT_BINARY_DIR}/life_backend/life_backend.lib")
+#pragma comment(lib, "${CMAKE_CURRENT_BINARY_DIR}/life_frontend/SDL2.dll")
