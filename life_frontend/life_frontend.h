@@ -26,9 +26,7 @@ typedef const char* (*SDL_GetErrorFunc)();
 typedef void (*SDL_DelayFunc)(Uint32 ms);
 typedef int (*SDL_RenderDrawLineFunc)(SDL_Renderer* renderer, int x1, int y1, int x2, int y2);
 typedef int (*SDL_RenderSetLogicalSizeFunc)(SDL_Renderer* renderer, int w, int h);
-typedef SDL_Surface* (*SDL_LoadBMPFunc)(const char* file);
-typedef void (*SDL_SetWindowIconFunc)(SDL_Window * window, SDL_Surface * icon);
-typedef void (*SDL_FreeSurfaceFunc)(SDL_Surface * surface);
+
 
 class SDLInterface {
 public:
@@ -47,9 +45,6 @@ public:
     virtual void Quit() = 0;
     virtual int DrawLine(SDL_Renderer* renderer, int x1, int y1, int x2, int y2) = 0;
     virtual int SetLogicalSize(SDL_Renderer* renderer, int w, int h) = 0;
-    virtual SDL_Surface* LoadBMP(const char* file) = 0;
-    virtual void SetWindowIcon(SDL_Window * window, SDL_Surface * icon) = 0;
-    virtual void FreeSurface(SDL_Surface * surface) = 0;
 
     virtual ~SDLInterface() = default;
 };
@@ -174,20 +169,6 @@ public:
     int SetLogicalSize(SDL_Renderer* renderer, int w, int h) override {
         auto func = LoadFunction<SDL_RenderSetLogicalSizeFunc>("SDL_RenderSetLogicalSize");
         return func(renderer, w, h);
-    }
-
-    SDL_Surface * LoadBMP(const char *file){
-        auto func = LoadFunction<SDL_LoadBMPFunc>("SDL_LoadBMP");
-        return func(file);
-    }
-    void SetWindowIcon(SDL_Window * window, SDL_Surface * icon){
-        auto func = LoadFunction<SDL_SetWindowIconFunc>("SDL_SetWindowIcon");
-        return func(window, icon);
-    }
-
-    void FreeSurface(SDL_Surface * surface){
-        auto func = LoadFunction<SDL_FreeSurfaceFunc>("SDL_FreeSurface");
-        return func(surface);
     }
 
     void Quit() override {

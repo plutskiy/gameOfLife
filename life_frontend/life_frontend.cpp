@@ -208,13 +208,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
         std::cerr << "Window creation failed: " << sdlLoader.GetError() << std::endl;
         return -1;
     }
-    SDL_Surface* icon = sdlLoader.LoadBMP("logo.bmp");
-    if (icon == NULL) {
-        std::cerr << "Unable to load icon: " << sdlLoader.GetError() << '\n';
-        return 1;
-    }
-    sdlLoader.SetWindowIcon(window, icon);
-    sdlLoader.FreeSurface(icon);
 
     SDL_Renderer* renderer = sdlLoader.CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
     if (!renderer) {
