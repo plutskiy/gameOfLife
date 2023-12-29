@@ -26,11 +26,11 @@ void drawGame(SDL_Renderer* renderer, Life& life, int cellsize, SDLInterfaceLoad
     sdlLoader.SetRenderDrawColor(renderer, 15, 59, 9, 0);
 
     for (int i = 0; i <= life.getWidwght(); ++i) {
-        sdlLoader.DrawLine(renderer, i * 10, 0, i * 10, life.getHeight() * 10);
+        sdlLoader.DrawLine(renderer, i * cellsize, 0, i * cellsize, life.getHeight() * 10);
     }
 
     for (int j = 0; j <= life.getHeight(); ++j) {
-        sdlLoader.DrawLine(renderer, 0, j * 10, life.getWidwght() * 10, j * 10);
+        sdlLoader.DrawLine(renderer, 0, j * cellsize, life.getWidwght() * cellsize, j * 10);
     }
 
     for (int i = 0; i < life.getWidwght(); ++i) {
@@ -51,11 +51,7 @@ void drawGame(SDL_Renderer* renderer, Life& life, int cellsize, SDLInterfaceLoad
 
 void inputHandler(Life& life, SDLInterfaceLoader& sdlLoader, SDL_Window* window, SDL_Renderer* renderer) {
     SDL_Event e;
-    bool isResizing = false;
-    double resizeX = 1.0;
-    double resizeY = 1.0;
     double scale = 1.0;
-    int displayIndex = 0;
 
     std::string str;
     while (!quit) {
@@ -99,8 +95,7 @@ void inputHandler(Life& life, SDLInterfaceLoader& sdlLoader, SDL_Window* window,
                 break;
             case SDL_MOUSEBUTTONUP:
                 if (e.button.button == SDL_BUTTON_LEFT) {
-                    if (e.button.x / cellsize < life.getWidwght() && e.button.y / cellsize < life.getHeight() && !
-                        isDrawing) {
+                    if (e.button.x / cellsize < life.getWidwght() && e.button.y / cellsize < life.getHeight() && !isDrawing) {
                         data = life.getCellState(e.button.x / cellsize, e.button.y / cellsize);
                         data
                             ? life.setDeadCell(e.button.x / cellsize, e.button.y / cellsize)
@@ -109,23 +104,19 @@ void inputHandler(Life& life, SDLInterfaceLoader& sdlLoader, SDL_Window* window,
                     }
                     isLeftButtonDown = false;
                 }
-                (e.button.button == SDL_BUTTON_RIGHT) ? isRightButtonDown = false : 1 + 1;
+                (e.button.button == SDL_BUTTON_RIGHT) ? isRightButtonDown = false : 0;
                 isDrawing = false;
                 break;
             case SDL_MOUSEMOTION:
-                if (isLeftButtonDown && e.motion.x < life.getWidwght() * cellsize && e.motion.y < life.getHeight() *
-                    cellsize) {
+                if (isLeftButtonDown && e.motion.x < life.getWidwght() * cellsize && e.motion.y < life.getHeight() * cellsize) {
                     isDrawing = true;
                     life.setAliveCell(e.motion.x / cellsize, e.motion.y / cellsize);
                     drawGame(renderer, life, 10, sdlLoader);
                 }
-                if (isRightButtonDown && e.motion.x < life.getWidwght() * cellsize && e.motion.y < life.getHeight() *
-                    cellsize) {
+                if (isRightButtonDown && e.motion.x < life.getWidwght() * cellsize && e.motion.y < life.getHeight() * cellsize) {
                     isDrawing = true;
                     life.setDeadCell(e.motion.x / cellsize, e.motion.y / cellsize);
                     drawGame(renderer, life, 10, sdlLoader);
-                }
-                if (scale < 1) {
                 }
                 break;
             case SDL_KEYDOWN:
@@ -234,7 +225,7 @@ int main(int argc, char* argv[]) {
 #else
     auto pathToSdlLibrary = pathToDirWhereExecutable  / MY_VARIABLE;
 #endif
-    SDLInterfaceLoader sdlLoader(pathToSdlLibrary.c_str());
+    SDLInterfaceLoader sdlLoader(pathToSdlLibrary.string());
 
     if (sdlLoader.Init(SDL_INIT_VIDEO) < 0) {
         std::cerr << "SDL initialization failed: " << sdlLoader.GetError() << std::endl;

@@ -26,6 +26,7 @@ message(STATUS "Path to SDL includes: ${SDL_INCLUDE_PATH}")
 target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${SDL_INCLUDE_PATH})
 target_link_libraries(${PROJECT_NAME} life_backend)
 include_directories(${PROJECT_NAME} ${SDL_INCLUDE_PATH})
+
 if (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
     set(CURRENT_OS "Linux")
     set(CURRENT_EXT "so")
@@ -33,11 +34,9 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
     cmake_path(APPEND SDL_PATH_FULL "${CMAKE_SOURCE_DIR}" "libraries" "${ARCH}" "${CURRENT_OS}" "SDL2.${CURRENT_EXT}")
     add_custom_command(TARGET ${PROJECT_NAME} PRE_BUILD
             COMMAND ${CMAKE_COMMAND} -E copy ${SDL_PATH_FULL} ${CMAKE_BINARY_DIR}
-            COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/logo.png ${CMAKE_CURRENT_BINARY_DIR}
     )
     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/info.desktop.in ${CMAKE_CURRENT_BINARY_DIR}/info.desktop)
     file(COPY ${CMAKE_CURRENT_BINARY_DIR}/info.desktop DESTINATION $ENV{HOME}/.local/share/applications/)
-    file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/logo.png DESTINATION $ENV{HOME}/.local/share/applications/)
 elseif (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     set(CURRENT_OS "Windows")
     set(CURRENT_EXT "dll")

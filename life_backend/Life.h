@@ -48,5 +48,3 @@ private:
     size_t height_ = 0;
     std::vector<bool> cell_states_;
 };
-
-

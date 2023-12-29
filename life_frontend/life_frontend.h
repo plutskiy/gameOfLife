@@ -1,6 +1,5 @@
 #pragma once
 
-// <- в данном случае не системная библиотекка
 #include <iostream>
 #include <string>
 #if defined(_WIN32) || defined(_WIN64)
@@ -90,6 +89,7 @@ public:
 #else
             std::cerr << "Error loading SDL library " << ": " << dlerror() << std::endl;
 #endif
+            exit(EXIT_FAILURE);
         }
     }
 
